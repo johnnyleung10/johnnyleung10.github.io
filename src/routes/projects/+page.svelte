@@ -18,7 +18,7 @@
 		return items.some((project) => project.skills.some((skill) => skill.slug === it.slug));
 	});
 
-	let search = '';
+	// let search = '';
 	let displayed: Array<Project> = [];
 
 	const isSelected = (slug: string): boolean => {
@@ -43,34 +43,36 @@
 					filters.some((filter) => filter.isSelected && filter.slug === tech.slug)
 				);
 
-			const isSearched =
-				search.trim().length === 0 ||
-				project.name.trim().toLowerCase().includes(search.trim().toLowerCase());
+			// const isSearched =
+			// 	search.trim().length === 0 ||
+			// 	project.name.trim().toLowerCase().includes(search.trim().toLowerCase());
 
-			return isFiltered && isSearched;
+			// return isFiltered && isSearched;
+			return isFiltered;
 		});
 	}
 
-	const onSearch = (e: CustomEvent<{ search: string }>) => {
-		search = e.detail.search;
-	};
+	// const onSearch = (e: CustomEvent<{ search: string }>) => {
+	// 	search = e.detail.search;
+	// };
 
 	onMount(() => {
-		const query = location.search;
+		// const query = location.search;
 
-		if (query) {
-			const queryParams = new URLSearchParams(location.search);
+		// if (query) {
+		// 	const queryParams = new URLSearchParams(location.search);
 
-			const item = queryParams.get('item');
+		// 	const item = queryParams.get('item');
 
-			if (item) {
-				search = item;
-			}
-		}
+		// 	if (item) {
+		// 		search = item;
+		// 	}
+		// }
 	});
 </script>
 
-<SearchPage {title} on:search={onSearch}>
+<!-- <SearchPage {title} on:search={onSearch}> -->
+<SearchPage {title}>
 	<div class="projects-filters">
 		{#each filters as tech}
 			<Chip active={tech.isSelected} classes={'text-0.8em'} on:click={() => onSelected(tech.slug)}
