@@ -1,7 +1,7 @@
 import { A as Assets, g as getSkills } from "./skills.params.js";
 const MY_PROJECTS = [
   {
-    slug: "slick-portfolio-angular",
+    slug: "unity-genetic-algorithm",
     color: "#5e95e3",
     description: "Designed and created a platformer game in Unity where the primary objective was to mine diamonds in a Minecraft-like world. This was done through a neural network and a genetic algorithm model to train the AI into learning the game through evolution in over 300 generations, where each generation had 20 models, the top 2 of which were chosen to reproduce and cross over DNA into the new generation",
     shortDescription: "Designed and created a platformer game in Unity where the primary objective was to mine diamonds in a Minecraft-like world. This was done through a neural network and a genetic algorithm model to train the AI into learning the game through evolution in over 300 generations, where each generation had 20 models, the top 2 of which were chosen to reproduce and cross over DNA into the new generation",
@@ -15,7 +15,7 @@ const MY_PROJECTS = [
     type: "Website Template"
   },
   {
-    slug: "slick-portfolio-svelte",
+    slug: "python-breast-cancer-model",
     color: "#ff3e00",
     description: "Extracted 699 cases of breast cancer data from the UCI Machine Learning Repository to train a program to predict whether a tumor is benign or malignant. The data was then extrapolated using a Support Vector Machine (SVM) model to find the correlation between the measured factors and the type of tumor. I used TensorFlow, NumPy, and scikit-learn for manipulating the data and to implement machine learning for predict the results to a ~95% accuracy.",
     shortDescription: "Extracted 699 cases of breast cancer data from the UCI Machine Learning Repository to train a program to predict whether a tumor is benign or malignant. The data was then extrapolated using a Support Vector Machine (SVM) model to find the correlation between the measured factors and the type of tumor. I used TensorFlow, NumPy, and scikit-learn for manipulating the data and to implement machine learning for predict the results to a ~95% accuracy.",

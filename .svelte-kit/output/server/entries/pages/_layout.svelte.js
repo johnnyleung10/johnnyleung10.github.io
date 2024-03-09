@@ -17,25 +17,24 @@ const NavMenu = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$unsubscribe_page = subscribe(page, (value) => $page = value);
   $$unsubscribe_theme = subscribe(theme, (value) => $theme = value);
   const items = [
-    {
-      title: NavBar.skills,
-      to: "/skills",
-      icon: "i-carbon-software-resource-cluster"
-    },
+    // { title: NavBar.skills, to: '/skills', icon: 'i-carbon-software-resource-cluster' },
     {
       title: NavBar.personal,
       to: "/projects",
-      icon: "i-carbon-cube"
+      icon: "i-carbon-cube",
+      newTab: false
     },
     {
       title: NavBar.career,
       to: "/experience",
-      icon: "i-carbon-development"
+      icon: "i-carbon-development",
+      newTab: false
     },
     {
       title: NavBar.resume,
-      to: "/resume",
-      icon: "i-carbon-result"
+      to: "/resume.pdf",
+      icon: "i-carbon-result",
+      newTab: true
     }
   ];
   $$result.css.add(css$1);
@@ -57,8 +56,8 @@ const NavMenu = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {}
   )} <span class="ml-2 text-md font-bold hidden md:inline">${escape(HOME.name)} ${escape(HOME.lastName)}</span></a> <div class="flex flex-row flex-1 self-center justify-center">${each(items, (item) => {
-    return `<a${add_attribute("href", `${base}${item.to}`, 0)} class="nav-menu-item !text-[var(--secondary-text)] svelte-z8k68j">${validate_component(UIcon, "UIcon").$$render($$result, { icon: item.icon, classes: "text-1.3em" }, {}, {})} <span class="nav-menu-item-label svelte-z8k68j">${escape(item.title)}</span> </a>`;
-  })}</div> <div class="flex flex-row self-stretch items-stretch gap-1 text-1.15em"><a${add_attribute("href", `${base}/search`, 0)} class="text-inherit col-center self-stretch px-2 hover:bg-[color:var(--main-hover)]">${validate_component(UIcon, "UIcon").$$render($$result, { icon: "i-carbon-search" }, {}, {})}</a> <button class="bg-transparent text-1em border-none cursor-pointer hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2">${$theme ? `${validate_component(UIcon, "UIcon").$$render($$result, { icon: "i-carbon-moon" }, {}, {})}` : `${validate_component(UIcon, "UIcon").$$render($$result, { icon: "i-carbon-sun" }, {}, {})}`}</button></div></nav> </div>`;
+    return `<a${add_attribute("href", `${base}${item.to}`, 0)} class="nav-menu-item !text-[var(--secondary-text)] svelte-z8k68j"${add_attribute("target", item.newTab ? "_blank" : "_self", 0)}>${validate_component(UIcon, "UIcon").$$render($$result, { icon: item.icon, classes: "text-1.3em" }, {}, {})} <span class="nav-menu-item-label svelte-z8k68j">${escape(item.title)}</span> </a>`;
+  })}</div> <div class="flex flex-row self-stretch items-stretch gap-1 text-1.15em"> <button class="bg-transparent text-1em border-none cursor-pointer hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2">${$theme ? `${validate_component(UIcon, "UIcon").$$render($$result, { icon: "i-carbon-moon" }, {}, {})}` : `${validate_component(UIcon, "UIcon").$$render($$result, { icon: "i-carbon-sun" }, {}, {})}`}</button></div></nav> </div>`;
 });
 const index = "";
 const _layout_svelte_svelte_type_style_lang = "";

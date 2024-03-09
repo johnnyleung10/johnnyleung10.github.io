@@ -1,19 +1,18 @@
 import { c as create_ssr_component, v as validate_component, e as escape, b as each, a as add_attribute } from "../../../chunks/ssr.js";
-import { a as getTimeDiff, b as getMonthName, c as EXPERIENCES } from "../../../chunks/params.js";
+import { b as getMonthName, c as EXPERIENCES } from "../../../chunks/params.js";
 import { C as Card } from "../../../chunks/Card.js";
 import { C as CardLogo } from "../../../chunks/CardLogo.js";
 import { C as CardTitle, a as ChipIcon } from "../../../chunks/ChipIcon.js";
 import { a as getAssetURL } from "../../../chunks/skills.params.js";
 import { b as base } from "../../../chunks/paths.js";
 import { U as UIcon } from "../../../chunks/UIcon.js";
-import { S as SearchPage } from "../../../chunks/SearchPage.js";
+import { C as CommonPage } from "../../../chunks/CommonPage.js";
 import "@riadh-adrani/utils";
 const ExperienceCard = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { experience } = $$props;
-  const months = getTimeDiff(experience.period.from, experience.period.to);
   const from = `${getMonthName(experience.period.from.getMonth())} ${experience.period.from.getFullYear()}`;
   const to = experience.period.to ? `${getMonthName(experience.period.to.getMonth())} ${experience.period.to.getFullYear()}` : "Present";
-  const period = `${from} - ${to} · ${months}`;
+  const period = `${from} - ${to}`;
   if ($$props.experience === void 0 && $$bindings.experience && experience !== void 0)
     $$bindings.experience(experience);
   return `${validate_component(Card, "Card").$$render(
@@ -56,7 +55,7 @@ const ExperienceCard = create_ssr_component(($$result, $$props, $$bindings, slot
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   const { items, title } = EXPERIENCES;
   let result = [...items];
-  return `${validate_component(SearchPage, "SearchPage").$$render($$result, { title }, {}, {
+  return `${validate_component(CommonPage, "CommonPage").$$render($$result, { title }, {}, {
     default: () => {
       return `<div class="col items-center relative mt-10 flex-1">${result.length === 0 ? `<div class="p-5 col-center gap-3 m-y-auto text-[var(--accent-text)] flex-1">${validate_component(UIcon, "UIcon").$$render(
         $$result,

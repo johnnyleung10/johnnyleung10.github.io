@@ -1,6 +1,6 @@
 import { c as create_ssr_component, a as add_attribute, v as validate_component, b as each, e as escape } from "../../../chunks/ssr.js";
-import { C as Chip } from "../../../chunks/Chip.js";
 import { d as countMonths, a as getTimeDiff, b as getMonthName, P as PROJECTS } from "../../../chunks/params.js";
+import { C as Chip } from "../../../chunks/Chip.js";
 import { C as Card } from "../../../chunks/Card.js";
 import { C as CardTitle, a as ChipIcon } from "../../../chunks/ChipIcon.js";
 import { U as UIcon } from "../../../chunks/UIcon.js";
@@ -8,7 +8,7 @@ import { C as CardDivider } from "../../../chunks/CardDivider.js";
 import { C as CardLogo } from "../../../chunks/CardLogo.js";
 import { a as getAssetURL, M as MY_SKILLS } from "../../../chunks/skills.params.js";
 import { b as base } from "../../../chunks/paths.js";
-import { S as SearchPage } from "../../../chunks/SearchPage.js";
+import { C as CommonPage } from "../../../chunks/CommonPage.js";
 const CardLink_svelte_svelte_type_style_lang = "";
 const css$1 = {
   code: ".card-link.svelte-18qy750:hover{border-color:var(--border-hover)}.card-link.svelte-18qy750:hover:after{content:attr(data-help);display:inline-block;position:absolute;width:max-content;background-color:var(--secondary);padding:5px 10px;right:40%;top:calc(100% + 5px);border:1px solid var(--border);border-radius:15px;z-index:10}",
@@ -98,35 +98,19 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let filters = MY_SKILLS.filter((it) => {
     return items.some((project) => project.skills.some((skill) => skill.slug === it.slug));
   });
-  let search = "";
   let displayed = [];
   $$result.css.add(css);
   {
     {
       displayed = items.filter((project) => {
         const isFiltered = filters.every((item) => !item.isSelected) || project.skills.some((tech) => filters.some((filter) => filter.isSelected && filter.slug === tech.slug));
-        const isSearched = search.trim().length === 0 || project.name.trim().toLowerCase().includes(search.trim().toLowerCase());
-        return isFiltered && isSearched;
+        return isFiltered;
       });
     }
   }
-  return `${validate_component(SearchPage, "SearchPage").$$render($$result, { title }, {}, {
+  return ` ${validate_component(CommonPage, "CommonPage").$$render($$result, { title }, {}, {
     default: () => {
-      return `<div class="projects-filters">${each(filters, (tech) => {
-        return `${validate_component(Chip, "Chip").$$render(
-          $$result,
-          {
-            active: tech.isSelected,
-            classes: "text-0.8em"
-          },
-          {},
-          {
-            default: () => {
-              return `${escape(tech.name)}`;
-            }
-          }
-        )}`;
-      })}</div> ${displayed.length === 0 ? `<div class="p-5 col-center gap-3 m-y-auto text-[var(--accent-text)] flex-1">${validate_component(UIcon, "UIcon").$$render(
+      return ` ${displayed.length === 0 ? `<div class="p-5 col-center gap-3 m-y-auto text-[var(--accent-text)] flex-1">${validate_component(UIcon, "UIcon").$$render(
         $$result,
         {
           icon: "i-carbon-cube",

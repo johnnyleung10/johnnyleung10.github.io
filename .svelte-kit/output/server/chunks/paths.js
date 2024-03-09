@@ -1,4 +1,4 @@
-let base = "/johnnyleung10.github.io";
+let base = "";
 let assets = base;
 const initial = { base, assets };
 function reset() {

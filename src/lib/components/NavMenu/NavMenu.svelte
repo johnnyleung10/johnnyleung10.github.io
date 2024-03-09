@@ -18,7 +18,7 @@
 		// { title: NavBar.skills, to: '/skills', icon: 'i-carbon-software-resource-cluster' },
 		{ title: NavBar.personal, to: '/projects', icon: 'i-carbon-cube', newTab: false},
 		{ title: NavBar.career, to: '/experience', icon: 'i-carbon-development', newTab: false},
-		{ title: NavBar.resume, to: '/src/routes/resume.pdf', icon: 'i-carbon-result', newTab: true}
+		{ title: NavBar.resume, to: '/resume.pdf', icon: 'i-carbon-result', newTab: true}
 	];
 </script>
 
