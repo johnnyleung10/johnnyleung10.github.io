@@ -83,6 +83,7 @@ declare module '$env/static/private' {
 	export const _CE_M: string;
 	export const XPC_SERVICE_NAME: string;
 	export const VSCODE_INJECTION: string;
+	export const GPG_TTY: string;
 	export const SHLVL: string;
 	export const HOME: string;
 	export const VSCODE_GIT_ASKPASS_MAIN: string;
@@ -190,6 +191,7 @@ declare module '$env/dynamic/private' {
 		_CE_M: string;
 		XPC_SERVICE_NAME: string;
 		VSCODE_INJECTION: string;
+		GPG_TTY: string;
 		SHLVL: string;
 		HOME: string;
 		VSCODE_GIT_ASKPASS_MAIN: string;

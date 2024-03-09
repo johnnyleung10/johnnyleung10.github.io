@@ -16,9 +16,9 @@
 
 	const items = [
 		// { title: NavBar.skills, to: '/skills', icon: 'i-carbon-software-resource-cluster' },
-		{ title: NavBar.personal, to: '/projects', icon: 'i-carbon-cube' },
-		{ title: NavBar.career, to: '/experience', icon: 'i-carbon-development' },
-		{ title: NavBar.resume, to: '/resume', icon: 'i-carbon-result' }
+		{ title: NavBar.personal, to: '/projects', icon: 'i-carbon-cube', newTab: false},
+		{ title: NavBar.career, to: '/experience', icon: 'i-carbon-development', newTab: false},
+		{ title: NavBar.resume, to: '/src/resume.pdf', icon: 'i-carbon-result', newTab: true}
 	];
 </script>
 
@@ -33,7 +33,7 @@
 		</a>
 		<div class="flex flex-row flex-1 self-center justify-center">
 			{#each items as item}
-				<a href={`${base}${item.to}`} class="nav-menu-item !text-[var(--secondary-text)]">
+				<a href={`${base}${item.to}`} class="nav-menu-item !text-[var(--secondary-text)]" target="{item.newTab ? '_blank' : '_self'}">
 					<UIcon icon={item.icon} classes="text-1.3em" />
 					<span class="nav-menu-item-label">{item.title}</span>
 				</a>
