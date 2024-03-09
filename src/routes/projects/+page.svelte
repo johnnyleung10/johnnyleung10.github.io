@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Chip from '$lib/components/Chip/Chip.svelte';
 	import ProjectCard from '$lib/components/ProjectCard/ProjectCard.svelte';
-	import SearchPage from '$lib/components/SearchPage.svelte';
+	import CommonPage from '$lib/components/CommonPage.svelte';
 	import { PROJECTS } from '$lib/params';
 	import type { Project, Skill } from '$lib/types';
 	import { onMount } from 'svelte';
@@ -72,14 +72,14 @@
 </script>
 
 <!-- <SearchPage {title} on:search={onSearch}> -->
-<SearchPage {title}>
-	<div class="projects-filters">
+<CommonPage {title}>
+	<!-- <div class="projects-filters">
 		{#each filters as tech}
 			<Chip active={tech.isSelected} classes={'text-0.8em'} on:click={() => onSelected(tech.slug)}
 				>{tech.name}</Chip
 			>
 		{/each}
-	</div>
+	</div> -->
 	{#if displayed.length === 0}
 		<div class="p-5 col-center gap-3 m-y-auto text-[var(--accent-text)] flex-1">
 			<UIcon icon="i-carbon-cube" classes="text-3.5em" />
@@ -92,7 +92,7 @@
 			{/each}
 		</div>
 	{/if}
-</SearchPage>
+</CommonPage>
 
 <style lang="scss">
 	.projects-list {

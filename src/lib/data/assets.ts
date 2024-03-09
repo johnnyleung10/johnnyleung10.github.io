@@ -72,7 +72,9 @@ const Assets = {
 	Unocss: a('unocss.svg'),
 	Ruvy: a('ruvy.svg'),
 	Postcss: a('postcss.svg'),
-	RiotGames: a('riotgames.jpg')
+	RiotGames: a('riotgames.jpg'),
+	Scotiabank: a('scotiabank.jpg'),
+	Sonically: a('sonically.jpeg')
 };
 
 export default Assets;
