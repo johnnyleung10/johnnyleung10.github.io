@@ -24,7 +24,8 @@
 		: 'now';
 </script>
 
-<Card color={project.color} href={`${base}/projects/${project.slug}`}>
+<!-- <Card color={project.color} href={`${base}/projects/${project.slug}`}> -->
+<Card color={project.color}>
 	<CardLogo alt={project.name} src={getAssetURL(project.logo)} size={40} radius={'0'} />
 	<div class="m-t-20px row justify-between items-center">
 		<CardTitle title={project.name} />
@@ -39,7 +40,7 @@
 		class="row m-b-15px justify-between text-[var(--secondary-text)] text-0.9em font-italic font-300"
 	>
 		<p>{project.type}</p>
-		<p>{period}</p>
+
 	</div>
 	<p class="text-[0.95em] text-[var(--secondary-text)] font-300 m-t-20px m-b-40px flex-1">
 		{project.shortDescription}
@@ -56,7 +57,6 @@
 			<ChipIcon
 				logo={getAssetURL(tech.logo)}
 				name={tech.name}
-				href={`${base}/skills/${tech.slug}`}
 			/>
 		{/each}
 	</div>

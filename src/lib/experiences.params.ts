@@ -13,12 +13,13 @@ const MY_EXPERIENCES: Array<Experience> = [
 		type: 'Software Development',
 		location: 'Los Angeles, CA',
 		period: { from: new Date(2023, 5, 1), to: new Date(2023, 8, 14) },
-		skills: getSkills('ts', 'js'),
+		skills: getSkills('go', 'unreal-engine', 'cpp'),
 		name: 'Software Engineer (Internship)',
 		color: '#ffffff',
 		links: [],
 		logo: Assets.RiotGames,
-		shortDescription: ''
+		shortDescription: '',
+		website: 'https://www.riotgames.com/en' 
 	},
 	{
 		slug: 'apple-2023',
@@ -30,12 +31,13 @@ const MY_EXPERIENCES: Array<Experience> = [
 		type: 'Software Development',
 		location: 'Cupertino, CA',
 		period: { from: new Date(2023, 0, 1), to: new Date(2023, 5, 31) },
-		skills: getSkills('svelte', 'ts', 'sass', 'css', 'html', 'js'),
+		skills: getSkills('docker', 'python', 'numpy', 'c-sharp'),
 		name: 'Software/AI Engineer (Internship)',
 		color: '#ffffff',
 		links: [],
 		logo: Assets.Apple,
-		shortDescription: ''
+		shortDescription: '',
+		website: 'https://www.apple.com/' 
 	},
 	{
 		slug: 'rg-2022',
@@ -47,12 +49,13 @@ const MY_EXPERIENCES: Array<Experience> = [
 		type: 'Software Development',
 		location: 'Los Angeles, CA',
 		period: { from: new Date(2022, 4, 1), to: new Date(2022, 7, 31) },
-		skills: getSkills('css', 'html', 'js'),
+		skills: getSkills('go', 'node'),
 		name:  'Software Engineer (Internship)',
 		color: '#ffffff',
 		links: [],
 		logo: Assets.RiotGames,
-		shortDescription: ''
+		shortDescription: '',
+		website: 'https://www.riotgames.com/en' 
 	},
 	{
 		slug: 'bns-2021',
@@ -63,12 +66,13 @@ const MY_EXPERIENCES: Array<Experience> = [
 		type: 'Software Development',
 		location: 'Toronto, ON',
 		period: { from: new Date(2021, 4, 1), to: new Date(2021, 7, 31) },
-		skills: getSkills('css', 'html', 'js'),
+		skills: getSkills('css', 'html', 'js', 'python', 'django', 'numpy'),
 		name: 'Data Scientist (Internship)',
 		color: '#ffffff',
 		links: [],
 		logo: Assets.Scotiabank,
-		shortDescription: ''
+		shortDescription: '',
+		website: 'https://www.scotiabank.com/ca/en/personal.html' 
 	},
 	{
 		slug: 'sonicaly-2021',
@@ -79,12 +83,13 @@ const MY_EXPERIENCES: Array<Experience> = [
 		type: 'Software Development',
 		location: 'Vancouver, BC',
 		period: { from: new Date(2021, 0, 1), to: new Date(2021, 3, 30) },
-		skills: getSkills('css', 'html', 'js'),
+		skills: getSkills('unity', 'node', 'firebase'),
 		name: 'Mobile Engineer (Internship)',
 		color: '#ffffff',
 		links: [],
 		logo: Assets.Sonically,
-		shortDescription: ''
+		shortDescription: '',
+		website: 'https://www.sonical.ly/' 
 	}
 ];
 

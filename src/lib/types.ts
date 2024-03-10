@@ -57,6 +57,7 @@ export interface Experience extends Project {
 	company: string;
 	location: string;
 	contract: ContractType;
+	website: string;
 }
 
 export interface Education extends Item {

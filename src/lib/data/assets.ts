@@ -74,7 +74,14 @@ const Assets = {
 	Postcss: a('postcss.svg'),
 	RiotGames: a('riotgames.jpg'),
 	Scotiabank: a('scotiabank.jpg'),
-	Sonically: a('sonically.jpeg')
+	Sonically: a('sonically.jpeg'),
+	BloomNotetaking: a('bloom-notetaking.png'),
+	MinemanNN: a('mineman-nn.png'),
+	BreastCancer: a('breast-cancer.png'),
+	TDApp: a('td-app.png'),
+	Unity: a('unity.png'),
+	SpringBoot: a('springboot.png'),
+	UnrealEngine: a('unreal.png')
 };
 
 export default Assets;

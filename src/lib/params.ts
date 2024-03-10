@@ -14,7 +14,7 @@ import {
 } from './types';
 import { Icons } from './utils';
 
-export const TITLE_SUFFIX = 'Slick template with Svelte';
+export const TITLE_SUFFIX = 'Johnny Leung Portfolio';
 
 export const NavBar = {
 	home: 'Home',
@@ -50,10 +50,12 @@ export const HOME: HomePageParams = {
 	description:
 		`4th year student @ University of Waterloo, 
 		Passionate for Backend Dev, AI / Machine Learning, Game Dev
-		Interned @ Apple, Riot Games, Scotiabank
+		Previous Intern @ Apple, Riot Games, Scotiabank
 		`,
 	links: [
-		{ platform: Platform.GitHub, link: 'https://github.com/johnnyleung10' },
+		{ 
+			platform: Platform.GitHub, 
+			link: 'https://github.com/johnnyleung10' },
 		{
 			platform: Platform.Linkedin,
 			link: 'https://www.linkedin.com/'
